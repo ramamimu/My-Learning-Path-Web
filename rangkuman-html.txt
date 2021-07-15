@@ -1,0 +1,28 @@
+<p title="">                : menampilkan text saat semua textnya di block
+<pre></pre>                 : menampilkan tulisan paragraph sesuai dengan konstektual (sama seperti <p> cuman ini bisa baca spasi), fixed-width font (usually Courier)
+<link rel="stylesheet" href="">     : memanggil css
+
+# Text formating
+<b>                     : bold text
+<strong>                : bold stronger hierarki text
+<em>                    : denoted hierarki word
+<i>                     : italic
+<small>                 : mengecilkan ukuran text
+<sub>                   : lambang kecil di bawah
+<sup>                   : lambang kecil di atas
+<ins>                   : menampilkan underline
+<del>                   : menampilkan linethrough
+<mark>                  : menampilkan highlight
+
+# Quotation
+<blockquote>, <q>       : untuk quote (paragraph/kalimat, kata/frasa)                        
+                        <blockquote cite="http://www.worldwildlife.org/who/index.html"> For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</blockquote>
+
+<abbr>                  : (abbreviation) atau akronim
+                        <abbr title="world health organization">WHO</abbr>
+<address>               : contact information (default: italic)
+<cite>                  : tag defines the title of a creative work
+                        <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+<bdo>                   : menentukan arah penulisan (bisa membalikkan kalimat)
+                        <bdo dir="rtl">This text will be written from right to left</bdo>
+<dfn>                   : define a term, ex: <dfn><abbr="cascading style sheet">css adalah .....</defines>
