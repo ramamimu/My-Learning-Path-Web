@@ -26,3 +26,73 @@
 <bdo>                   : menentukan arah penulisan (bisa membalikkan kalimat)
                         <bdo dir="rtl">This text will be written from right to left</bdo>
 <dfn>                   : define a term, ex: <dfn><abbr="cascading style sheet">css adalah .....</defines>
+
+# Link
+
+## absolute url
+<a href="url">link text</a>
+<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+### link to javascript
+<a href="javascript:alert('Hello World!');">Execute JavaScript</a>
+
+### link to phone number
+<a href="tel:+4733378901">+47 333 78 901</a>
+
+### email
+<a href="mailto:someone@example.com">Send email</a>
+
+### gift
+<img src="smiley.gif" alt="HTML tutorial" style="width:42px;
+
+### button
+<button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+
+## relative url
+<a href="default.asp">
+height:42px;"></a>
+<a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
+<a href="/html/default.asp">HTML tutorial</a>
+<a href="default.asp">HTML tutorial</a>
+
+# Bookmark (jump to)
+<h2 id="C4">Chapter 4</h2>
+<a href="#C4">Jump to Chapter 4</a>
+<a href="html_demo.html#C4">Jump to Chapter 4</a>   : a bookmark on another page
+
+# image
+{
+    <map>               :define an image map. An image map is an image with clickable areas.
+    Ex:
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+ 
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+        </map>
+
+    reference:  https://www.w3schools.com/tags/att_area_coords.asp
+                https://www.w3schools.com/html/html_images_imagemap.asp
+}
+{
+    <picture>       :  more flexibility in specifying image resources.  one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+    ex:
+        <picture>
+            <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+            <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+            <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+        </picture>
+    reference: https://www.w3schools.com/html/html_images_picture.asp
+}
+
+## Background image
+{
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; (zoom)   or   background-size: 100% 100%; (stretch)
+}
