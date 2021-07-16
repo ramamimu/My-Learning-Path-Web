@@ -96,3 +96,58 @@ height:42px;"></a>
   background-attachment: fixed;
   background-size: cover; (zoom)   or   background-size: 100% 100%; (stretch)
 }
+
+# TABLE
+
+<table>
+    <caption>whatever</caption>     // caption
+    <tr>                    // table row
+        <th></th>           // table header
+        <th></th>
+        <th colspan="2"></th>   // colomn span
+    </tr>
+    <tr rowspan="3">            // row span
+        <td></td>               // table data
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<colgroup>          :tag specifies a group of one or more columns in a table for formatting.
+                    <colgroup>
+                        <col span="2" style="background-color:red">
+                        <col style="background-color:yellow">
+                    </colgroup>
+<thead>, <tbody>, <tfooter>     : to specified structure in table
+
+
+# LIST
+<ul>, <ol>, <dl>
+
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+## <ul>
+The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+
+Value	Description
+disc	Sets the list item marker to a bullet (default)
+circle	Sets the list item marker to a circle
+square	Sets the list item marker to a square
+none	The list items will not be marked
+
+## <ol>
+The type attribute of the <ol> tag, defines the type of the list item marker:
+
+Type	    Description
+type="1"	The list items will be numbered with numbers (default)
+type="A"	The list items will be numbered with uppercase letters
+type="a"	The list items will be numbered with lowercase letters
+type="I"	The list items will be numbered with uppercase roman numbers
+type="i"	The list items will be numbered with lowercase roman numbers
