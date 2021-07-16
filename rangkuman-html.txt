@@ -151,3 +151,10 @@ type="A"	The list items will be numbered with uppercase letters
 type="a"	The list items will be numbered with lowercase letters
 type="I"	The list items will be numbered with uppercase roman numbers
 type="i"	The list items will be numbered with lowercase roman numbers
+
+# IFRAME
+<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>             : menampilkan laman web lain di dalam website
+
+## iframe target for a link
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
