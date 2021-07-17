@@ -37,7 +37,7 @@ p.hidden {border-style: hidden;}
 p.mix {border-style: dotted dashed solid double;}
 
 ## border width
-border-width: |px|medium|thick|px px|px px px px|
+border-width: |px|thin|medium|thick|px px|px px px px|
 
 ## border color
 border-color : is like as bakcground-color X border-width(color|color color|color 4x|)
@@ -105,3 +105,138 @@ The height and width properties may have the following values:
     inherit - The height/width will be inherited from its parent value
 
 width can be set {max-width: px;}
+
+# OUTLINE
+An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+
+CSS has the following outline properties:
+    outline-style
+    outline-color
+    outline-width
+    outline-offset
+    outline
+
+## Outline style
+similar with border in format
+
+## Outline width
+format similar with border
+
+## Outline Shorthand
+format similar with border
+
+## Outline Offset
+batas luar outline: px
+
+# TEXT
+## Kayak arah huruf arab
+  direction: rtl;
+  unicode-bidi: bidi-override;
+
+## Vertical Align
+vertical-align: baseline|text-top|text-bottom|sub|super;
+
+## Text Decoration
+text-decoration : none|overline|line-through|underline;
+
+## Text Transform
+text-transform : uppercase|lowercase|capitalize;
+
+## text-indent: px;
+
+## letter-spacing: px; (jarak spasi antar huruf dalam satu kalimat)
+
+## letter-height: px; (jarak spasi antar baris kalimat)
+
+## word-spacing : px (jarak antar kata)
+
+# text-shadow: 2px 2px 5px red;
+(horizonral vertical blur color)
+
+
+# FONTS
+Generic Font Family	    Examples of Font Names
+Serif	                Times New Roman
+                        Georgia
+                        Garamond
+Sans-serif	            Arial
+                        Verdana
+                        Helvetica
+Monospace	            Courier New
+                        Lucida Console
+                        Monaco
+Cursive	                Brush Script MT
+                        Lucida Handwriting
+Fantasy	                Copperplate
+                        Papyrus
+
+## Font style
+font-style: normal|italic|oblique;
+
+## Font Weight
+font-weight: normal|bold;
+
+## Font Variant
+font-variant: normal|small-caps;
+
+## Font Size
+font-size: px|em|vw;
+
+## Google Fonts
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+
+## The CSS Font Property
+To shorten the code, it is also possible to specify all the individual font properties in one property.
+The font property is a shorthand property for:
+
+font-style
+font-variant
+font-weight
+font-size/line-height
+font-family
+
+# ICON
+wrap with <i> <span>
+
+# Link
+a:link - a normal, unvisited link
+a:visited - a link the user has visited
+a:hover - a link when the user mouses over it
+a:active - a link the moment it is clicked
+
+a.two:link {color:#ff0000;}
+
+!! a:hover MUST come after a:link and a:visited
+!! a:active MUST come after a:hover
+
+# TYPE CURSOR
+
+<p>Mouse over the words to change the cursor.</p>
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+
+#List style
+list-style: circle|square|upper-roman|lower-alpha;
+
+## List Style Image
+list-style-image: url('sqpurple.gif');
+
