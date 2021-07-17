@@ -1,0 +1,107 @@
+# BACKGROUND
+background-color
+background-image
+
+background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;
+
+background-position: left|right|top|bottom|center|x% y%|xpx ypx|;
+
+background-attachment: scroll|fixed|local|initial|inherit;
+
+background-size: auto|length|cover|contain|initial|inherit;
+
+background-origin: padding-box|border-box|content-box|initial|inherit;
+
+## Shorthand
+    1. background-color
+    2. background-image
+    3. background-repeat
+    4. background-attachment
+    5. background-position
+
+background: #ffffff url("img_tree.png") no-repeat right top;
+
+
+# BORDER
+## border style
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+## border width
+border-width: |px|medium|thick|px px|px px px px|
+
+## border color
+border-color : is like as bakcground-color X border-width(color|color color|color 4x|)
+
+## border individual set style
+border-top-style: 
+border-right-style: 
+border-bottom-style: 
+border-left-style: 
+
+border-style : like as border-style X border-width
+
+## Shorthand border
+border-width
+border-style (required)
+border-color
+border: 5px solid red;
+
+## side border only
+border-left|border-right|border-top|
+border-bottom|: Shorthand;
+note: usually combo with background-color
+
+## border radius
+border-radius: px;
+
+
+# MARGIN
+Margin - Individual Sides
+CSS has properties for specifying the margin for each side of an element:
+
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+All the margin properties can have the following values:
+
+    auto - the browser calculates the margin (usually to the center)
+
+    length - specifies a margin in px, pt, cm, etc.
+
+    % - specifies a margin in % of the width of the containing element
+
+    inherit - specifies that the margin should be inherited from the parent element
+
+    Tip: Negative values are allowed.
+
+You can set the margin property to auto to horizontally center the element within its container.
+
+# PADDING
+setup like as margin
+
+# WIDTH AND WEIGHT
+CSS height and width Values
+The height and width properties may have the following values:
+
+    auto - This is default. The browser calculates the height and width
+
+    length - Defines the height/width in px, cm etc.
+
+    % - Defines the height/width in percent of the containing block
+
+    initial - Sets the height/width to its default value
+
+    inherit - The height/width will be inherited from its parent value
+
+width can be set {max-width: px;}
