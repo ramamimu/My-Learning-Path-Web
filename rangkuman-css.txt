@@ -235,8 +235,58 @@ a.two:link {color:#ff0000;}
 <span style="cursor:wait">wait</span><br>
 
 #List style
-list-style: circle|square|upper-roman|lower-alpha;
+list-style-type: circle|square|upper-roman|lower-alpha;
 
 ## List Style Image
-list-style-image: url('sqpurple.gif');
+list-style-image: url(sqpurple.gif);
+list-style: circle inside url('img_marker.png');
 
+# TABLE
+table, th, td{
+    caption-side: top|bottom;
+    padding: 15px;
+    vertical-align: bottom;
+    text-align: left;
+    width: 100%;
+    height: px;
+    empty-cells: show|hide;
+
+    border-collapse: separate|collapse|initial|inherit;
+    or
+    border-spacing: px;
+
+    border: 1px solid black; || border-bottom: 1px solid #ddd;
+    tr:hover {background-color: #f5f5f5;}
+    table-layout: auto|fixed;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2;}      : efek berwarna selang-seling
+
+## Responsive Table
+<div style="overflow-x:auto;">
+  <table>
+  ...content...
+  </table>
+</div>
+
+# Display
+display: none|block|inline|inline-block|flex;
+flex-direction: row|column|row-reverse|column-reverse
+visibiility: none|hidden;
+
+# POSITION
+position: static|relative|fixed|absolute|sticky;
+
+position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+position: relative; is positioned relative to its normal position.
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.(normal position[jarak terhadap posisi margin])
+
+position: fixed; is positioned relative to the viewport, 
+(kombo dengan posisi margin di viewport, nempel di layar)
+which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).(jarak posisi sesungguhnya)(terhadap halaman html/element terdekat/margin terdekat/posisinya biasanya di dalam sesuatu lain)
+
+z-index: -1|1;
+z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative (in behind) stack order. (posisi depan dan belakang text)
