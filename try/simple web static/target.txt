@@ -1,0 +1,4 @@
+header
+simple nav
+3 content float
+playing box here to understand display, position and float concept
