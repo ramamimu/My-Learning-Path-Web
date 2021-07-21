@@ -202,6 +202,7 @@ font-family
 # ICON
 wrap with <i> <span>
 
+
 # Link
 a:link - a normal, unvisited link
 a:visited - a link the user has visited
@@ -213,8 +214,8 @@ a.two:link {color:#ff0000;}
 !! a:hover MUST come after a:link and a:visited
 !! a:active MUST come after a:hover
 
-# TYPE CURSOR
 
+# TYPE CURSOR
 <p>Mouse over the words to change the cursor.</p>
 <span style="cursor:auto">auto</span><br>
 <span style="cursor:crosshair">crosshair</span><br>
@@ -234,12 +235,14 @@ a.two:link {color:#ff0000;}
 <span style="cursor:w-resize">w-resize</span><br>
 <span style="cursor:wait">wait</span><br>
 
+
 #List style
 list-style-type: circle|square|upper-roman|lower-alpha;
 
 ## List Style Image
 list-style-image: url(sqpurple.gif);
 list-style: circle inside url('img_marker.png');
+
 
 # TABLE
 table, th, td{
@@ -290,3 +293,59 @@ position: absolute; is positioned relative to the nearest positioned ancestor (i
 
 z-index: -1|1;
 z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative (in behind) stack order. (posisi depan dan belakang text)
+
+# OVERFLOW
+
+The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+The overflow property has the following values:
+
+    * visible - Default. The overflow is not clipped. The content renders outside the element's box (default)
+    * hidden - The overflow is clipped, and the rest of the content will be invisible
+    * scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+    * auto - Similar to scroll, but it adds scrollbars only when necessary
+
+overflow-x and overflow-y
+The overflow-x and overflow-y properties specifies whether to change the overflow of content just horizontally or vertically (or both):
+
+overflow-x specifies what to do with the left/right edges of the content.
+overflow-y specifies what to do with the top/bottom edges of the content.
+
+
+# FLOAT
+float: none|left|right|inherit;
+(bisa buat atur gambar berjejer)
+
+the  following elemen is clear
+clear: none|left|right|inherit;
+
+clearfix pakai overflow: auto;
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+(ini cara aman)
+
+
+# COMBINATOR
+Selector	        Example	        Example description
+element element	    div p	        Selects all <p> elements inside <div> elements
+element>element	    div > p	        Selects all <p> elements where the parent is a <div> element
+element+element	    div + p	        Selects the first <p> element that are placed immediately after <div> elements
+element1~element2	p ~ ul	        Selects every <ul> element that are preceded by a <p> element
+
+
+# PSEUDO CLASSES
+selector:hover{}
+selector:first-child{}
+
+# PSEUDO ELEMENT
+selector::first-letter{}
+selector::first-line{}
+selector::before{}
+selector::before{}
+selector::after{}
+selector::selection{}                   (ketika text diblock)
+selector::marker{}                      (use for ordered and unordered list)
+
