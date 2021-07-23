@@ -433,3 +433,199 @@ background-image: radial-gradient(shape size at position, start-color, ..., last
   farthest-corner
 
 
+# SHADOW EFFECT
+## text-shadow: horizontalpx verticalpx blurpx color;
+its possible some of value;
+
+## box-shadow is like text-shadow
+
+
+# TEXT EFFECT
+
+  text-overflow
+  word-wrap
+  word-break
+  writing-mode
+
+p.test1 {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+p.test2 {
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  word-wrap: break-word;
+  
+p.test1 {
+  word-break: keep-all;
+}
+
+p.test2 {
+  word-break: break-all;
+}
+
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+
+span.test2 {
+  writing-mode: vertical-rl;
+}
+
+p.test2 {
+  writing-mode: vertical-rl;
+}
+
+
+# WEB FONTS
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
+div {
+  font-family: myFirstFont;
+}
+
+@font-face {
+  font-family: sansation;
+  src: url(sansation_light.woff);
+}
+
+@font-face {
+  font-family: sansation;
+  src: url(sansation_bold.woff);
+  font-weight: bold;
+
+}
+
+
+# CSS 2D Transforms Methods
+With the CSS transform property you can use the following 2D transformation methods:
+
+translate(px,px)     
+rotate(deg)        
+scaleX()        
+scaleY()        
+scale(times,times)         
+skewX(deg)                    (membelah ketupat)
+skewY(deg)                    ((membelah ketupat)
+skew()
+matrix()
+
+transform: methods;
+
+ matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY());
+
+
+# CSS 3D Transforms Methods
+With the CSS transform property you can use the following 3D transformation methods:
+
+rotateX()       deg
+rotateY()
+rotateZ()
+
+
+# TRANSITION
+
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+
+transition: width 2s, height 4s;
+
+#div1 {transition-timing-function: linear;}
+#div2 {transition-timing-function: ease;}
+#div3 {transition-timing-function: ease-in;}
+#div4 {transition-timing-function: ease-out;}
+#div5 {transition-timing-function: ease-in-out;}
+
+transition-delay: 1s
+  
+(TRANSITION AND TRANSFORM)
+  div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+////////////////////////////////
+
+
+transition: width 2s ease-in-out 0.5s;
+"2" second duration, "ease-in-out" speed curve, and a "0.5" second delay before starting.
+
+
+# ANIMATION
+div {
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+SHORTHAND
+  animation: example 5s linear 2s infinite alternate;
+
+
+////////
+  animation-duration: s;
+
+  animation-delay:  s; (posible to negative)
+
+  animation-iteration-count: number|infinite;
+
+  animation-direction: normal|reverse|alternate|  alternate-reverse;            (putar-balik atau lurus terus)
+  ///////////////////////
+  normal - The animation is played as normal (forwards). This is default
+  reverse - The animation is played in reverse direction (backwards)
+  alternate - The animation is played forwards first, then backwards
+  alternate-reverse - The animation is played backwards first, then forwards
+  ///////////////////////
+  
+  animation-timing-function: ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);  (pelan awal atau akhir)
+  
+  animation-fill-mode: none|forwards|backwards|both;
+
+
+
+
+ADDDDDDDDDDDDDDDDDDDDDDDDD      :D
+
+# IMAGE
+
+object-fit: fill|contain|cover|none|scale-down;
+
+  fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+  contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+  cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+  none - The image is not resized
+  scale-down - the image is scaled down to the smallest version of none or contain
+
