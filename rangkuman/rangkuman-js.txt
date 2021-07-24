@@ -1,0 +1,371 @@
+# JavaScript Display Possibilities
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().
+
+## ALL Example
+<button onclick="this.innerHTML=Date()">The time is?</button>
+innerHTML = 5 + 6;
+document.write(5 + 6);
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+window.alert(5 + 6);
+alert(5 + 6);
+console.log(5 + 6);
+<button onclick="window.print()">Print this page</button>
+
+## JavaScript Keywords
+Keyword	        Description
+var	            Declares a variable
+let	            Declares a block variable
+const	        Declares a block constant
+if	            Marks a block of statements to be executed on a condition
+switch	        Marks a block of statements to be executed in different cases
+for	            Marks a block of statements to be executed in a loop
+function        Declares a function
+return	        Exits a function
+try	            Implements error handling to a block of statements
+
+## Common HTML Events
+
+Event	        Description
+onchange	    An HTML element has been changed
+onclick	        The user clicks an HTML element
+onmouseover	    The user moves the mouse over an HTML element
+onmouseout	    The user moves the mouse away from an HTML element
+onkeydown	    The user pushes a keyboard key
+onload	        The browser has finished loading the page
+
+## STRING METHODS
+
+let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+txt.length     // Returns 26
+
+let str = "Apple, Banana, Kiwi";
+str.slice(7, 13)     // Returns Banana
+
+let str = "Apple, Banana, Kiwi";
+str.slice(-12, -6)    // Returns Banana
+str.slice(7);    // Returns Banana,Kiwi
+str.slice(-12)    // Returns Banana,Kiwi
+
+let str = "Apple, Banana, Kiwi";
+str.substr(7, 6)    // Returns Banana
+str.substr(7)    // Returns Banana,Kiwi
+str.substr(-4)    // Returns Kiwi
+
+let text = "Please visit Microsoft!";
+let newText = text.replace("Microsoft", "W3Schools");
+let newText = text.replace("MICROSOFT", "W3Schools"); // doent work bcz its case sensitive
+let newText = text.replace(/MICROSOFT/i, "W3Schools"); // replace with ignore case sensitive and replace one by one in every single running
+let text = "Please visit Microsoft and Microsoft!";
+let newText = text.replace(/Microsoft/g, "W3Schools"); // replace in one execution
+
+let text1 = "Hello World!";       // String
+let text2 = text1.toUpperCase();  // text2 is text1 converted to upper
+let text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+similar with
+text = "Hello" + " " + "World!";
+
+let text = "       Hello World!        ";
+text.trim()    // Returns "Hello World!", ignore white space
+
+let text = "5";
+text.padStart(4,0)      // Returns 0005
+text.padEnd(4,0)        // Returns 5000
+
+text,indexOf("H");      // return value where is "H" placed
+
+let text = "HELLO WORLD";
+text.charAt(0)              // Returns H
+text[0]                     // returns H. difference is if undefine, charAt return "", but [..] will undefined.
+text.charCodeAt(0)          // Returns 72 The method returns a UTF-16 code (an integer between 0 and 65535).
+
+let text = "a,b,c,d,e,f";
+const myArray = text.split("c");    // return a,b,
+
+let str = "Please locate where 'locate' occurs!";
+str.indexOf("locate")           // Returns 7
+str.lastIndexOf("locate")       // Returns 21
+str.lastIndexOf("John")         // Returns -1
+str.indexOf("locate", 15)       // Returns 21. Both methods accept a second parameter as the starting position for the search
+str.lastIndexOf("locate", 15)   // Returns 7
+str.search("locate")            // Returns 7. search() method searches a string for a specified value and returns the position of the match
+//////////////////////////
+difference 
+    The search() method cannot take a second start position argument.
+    The indexOf() method cannot take powerful search values (regular expressions).
+//////////////////////////
+let text = "The rain in SPAIN stays mainly in the plain";
+text.match(/ain/g)    // Returns an array [ain,ain,ain]
+////////////////////////
+string.match(regexp)
+regexp      : Required. The value to search for, as a regular expression.
+Returns     : An Array, containing the matches, one item for each match, or null if no match is found.
+////////////////////////
+text.match(/ain/gi)   // Returns an array [ain,AIN,ain,ain]
+
+let text = "Hello world, welcome to the universe.";
+text.includes("world")    // Returns true
+///////////////////////////
+string.includes(searchvalue, start)
+searchvalue	Required. The string to search for
+start	Optional. Default 0. Position to start the search
+Returns:	Returns true if the string contains the value, otherwise false
+JS Version:	ES6 (2015)
+///////////////////////////
+text.includes("world", 12)    // Returns false
+
+let text = "Hello world, welcome to the universe.";
+text.startsWith("Hello")   // Returns true
+//////////////////////////
+string.startsWith(searchvalue, start)
+Parameter Values
+Parameter	Description
+searchvalue	Required. The value to search for.
+start	Optional. Default 0. The position to start the search
+//////////////////////////
+let text = "Hello world, welcome to the universe.";
+text.startsWith("world")    // Returns false
+text.startsWith("world", 5)    // Returns false
+text.startsWith("world", 6)    // Returns true
+
+var text = "John Doe";
+text.endsWith("Doe")    // Returns true
+
+## JavaScript Template Literals
+(Template Literals are not supported in Internet Explorer.)
+### Template Literals
+`` (back quotes), allow multiple line but not supported in internet explore
+
+### Interpolation and Subtitution
+let firstName = "John";
+let lastName = "Doe";
+let text = `Welcome ${firstName}, ${lastName}`;
+
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+### HTML Templates
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+let html = `<h2>${header}</h2><ul>`;
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+
+
+# HEXADECIMAL
+let myNumber = 32;
+myNumber.toString(10);  // returns 32
+myNumber.toString(32);  // returns 10
+myNumber.toString(16);  // returns 20
+myNumber.toString(8);   // returns 40
+myNumber.toString(2);   // returns 100000
+
+
+# NUMBER METHODS
+let x = 123;
+x.toString();            // returns 123 from variable x
+(123).toString();        // returns 123 from literal 123
+(100 + 23).toString();   // returns 123 from expression 100 + 23
+
+let x = 9.656;
+x.toExponential(2);     // returns 9.66e+0
+x.toExponential(4);     // returns 9.6560e+0
+x.toExponential(6);     // returns 9.656000e+0
+
+let x = 9.656;
+x.toFixed(0);           // returns 10
+x.toFixed(2);           // returns 9.66
+x.toFixed(4);           // returns 9.6560
+x.toFixed(6);           // returns 9.656000
+
+let x = 9.656;
+x.toPrecision();        // returns 9.656
+x.toPrecision(2);       // returns 9.7
+x.toPrecision(4);       // returns 9.656
+x.toPrecision(6);       // returns 9.65600
+
+let x = 123;
+x.valueOf();            // returns 123 from variable x
+(123).valueOf();        // returns 123 from literal 123
+(100 + 23).valueOf();   // returns 123 from expression 100 + 23
+
+/////////////////////////////
+//////typeof variable//////// to check type of variable
+/////////////////////////////
+
+
+# Converting Variables to Numbers
+    The Number() method
+    The parseInt() method
+    The parseFloat() method
+
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number(" 10  ");       // returns 10
+Number("10.33");       // returns 10.33
+Number("10,33");       // returns NaN
+Number("10 33");       // returns NaN
+Number("John");        // returns NaN
+
+
+Number(new Date("2017-09-30"));    // returns 1506729600000
+The Number() method above returns the number of milliseconds since 1.1.1970.
+d.getFullYear();
+d.getMonth();
+
+parseFloat("10");        // returns 10
+parseFloat("10.33");     // returns 10.33
+parseFloat("10 20 30");  // returns 10
+parseFloat("10 years");  // returns 10
+parseFloat("years 10");  // returns NaN
+
+
+## Number Properties
+Property    	        Description
+MAX_VALUE	            Returns the largest number possible in JavaScript
+MIN_VALUE   	        Returns the smallest number possible in JavaScript
+POSITIVE_INFINITY	    Represents infinity (returned on overflow)
+NEGATIVE_INFINITY	    Represents negative infinity (returned on overflow)
+NaN	                    Represents a "Not-a-Number" value
+
+let x = Number.MAX_VALUE;
+let x = Number.POSITIVE_INFINITY;
+let x = Number.NEGATIVE_INFINITY;
+let x = Number.NaN;              
+
+# ARRAY
+const cars = new Array("Saab", "Volvo", "BMW");
+
+const person = ["John", "Doe", 46];
+const person = {firstName:"John", lastName:"Doe", age:46};
+
+cars.length   // Returns the number of elements
+cars.sort()   // Sorts the array
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[0];    // Returns "Banana"
+
+### Two Different Looping Way
+///////////////////////
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+////////////////////////
+////////////////////////
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+
+/////////////////////////
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Lemon");  // Adds a new element (Lemon) to fruits
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[fruits.length] = "Lemon";  // Adds "Lemon" to fruits
+
+const points = new Array();     // Bad
+const points = [];              // Good 
+
+
+# JavaScript Array Methods
+## Converting Arrays to Strings
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();      // Banana,Orange,Apple,Mango
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");     // Banana * Orange * Apple * Mango
+
+variable.push(value)        // adding
+variable.pop()              // removing last
+variable.unshift(valur)     // adding in first element
+variable.shift();           // Removes first element
+
+## Splicing An Array
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+///////////////////////////////
+The first parameter (2) defines the position where new elements should be added (spliced in).
+The second parameter (0) defines how many elements should be removed.
+The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+The splice() method returns an array with the deleted items.
+/////////////////////////////
+fruits.splice(0, 1);        // Removes the first element
+
+## Merging (Concatenating) Arrays
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);      // Concatenate (join) myGirls and myBoys
+
+const arr1 = ["Cecilie", "Lone"];
+const arr2 = ["Emil", "Tobias", "Linus"];
+const arr3 = ["Robin", "Morgan"];
+const myChildren = arr1.concat(arr2, arr3);     // more concat
+
+## Slicing an Array
+The slice() method slices out a piece of an array into a new array.
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1);     // "Orange", "Lemon", "Apple", "Mango"
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(3);     // Apple,Mango
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+const citrus = fruits.slice(1, 3);  // Orange,Lemon
+
+
+## SORT
+const fruits = ["Banana", "Orange", "Apple", "Mango"];fruits.sort();        // Sorts the elements of fruits
+fruits.reverse();     // Then reverse the order of the elements
+points.sort(function(a, b){return a - b});      // default sort is ascending in string, but it doesnt work in number, thats the way to handle
+
+## Sorting an Array in Random Order
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return 0.5 - Math.random()});
+-----------//-----------
+(The Fisher Yates Method)
+const points = [40, 100, 1, 5, 25, 10];
+
+for (let i = points.length -1; i > 0; i--) {
+  let j = Math.floor(Math.random() * i)
+  let k = points[i]
+  points[i] = points[j]
+  points[j] = k
+}
+
+-----------//------------
+
+## Find the Highest (or Lowest) Array Value
+get from first index on sort
+or
+algoritma sederhana lainne
+
