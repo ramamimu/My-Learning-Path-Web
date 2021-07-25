@@ -351,7 +351,8 @@ points.sort(function(a, b){return a - b});      // default sort is ascending in 
 ## Sorting an Array in Random Order
 const points = [40, 100, 1, 5, 25, 10];
 points.sort(function(a, b){return 0.5 - Math.random()});
------------//-----------
+
+-------------//-----------
 (The Fisher Yates Method)
 const points = [40, 100, 1, 5, 25, 10];
 
@@ -361,11 +362,324 @@ for (let i = points.length -1; i > 0; i--) {
   points[i] = points[j]
   points[j] = k
 }
-
------------//------------
+-------------//------------
 
 ## Find the Highest (or Lowest) Array Value
 get from first index on sort
 or
 algoritma sederhana lainne
 
+
+# Iteration
+## Array.forEach();
+const numbers = [45, 4, 9, 16, 25];
+let txt = "";
+numbers.forEach(myFunction);
+
+function myFunction(value, index, array) {
+  txt += value + "<br>";
+}
+
+## Array.map()
+(method creates a new array by performing a function on each array element, method does not change the original array)
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+
+## Array.filter()
+( method creates a new array with array elements that passes a test)
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+## Array.reduce()
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+or
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction, 100);
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+## Array.every()    // is all pass test?
+## Array.some()     // is some pass test?
+## Array.find()     // is find a value?
+
+
+# DATE OBJECT
+const d = new Date();     // show date now. if give parameter, its will convert to ms since january 1970
+
+
+
+new Date()
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+new Date(milliseconds)
+new Date(date string)
+
+Zero time is January 01, 1970 00:00:00 UTC.
+
+const d = new Date("October 13, 2014 11:13:00");
+
+const d = new Date("2015-03-25");
+Wed Mar 25 2015 07:00:00 GMT+0700 (Indochina Time)
+
+{
+  const d = new Date();
+
+  document.getElementById("demo").innerHTML = d;
+  Sun Jul 25 2021 07:19:59 GMT+0700 (Indochina Time)
+
+  document.getElementById("demo").innerHTML = d.toString();
+  Sun Jul 25 2021 07:19:30 GMT+0700 (Indochina Time)
+
+  document.getElementById("demo").innerHTML = d.toUTCString();
+  Sun, 25 Jul 2021 00:19:29 GMT
+
+  document.getElementById("demo").innerHTML = d.toDateString();
+  Sun Jul 25 2021
+
+  document.getElementById("demo").innerHTML = d.toISOString();
+}
+
+These methods can be used for getting information from a date object:
+Method	              Description
+getFullYear()	        Get the year as a four digit number (yyyy)
+getMonth()	          Get the month as a number (0-11)
+getDate()	            Get the day as a number (1-31)
+getHours()	          Get the hour (0-23)
+getMinutes()	        Get the minute (0-59)
+getSeconds()	        Get the second (0-59)
+getMilliseconds()	    Get the millisecond (0-999)
+getTime()	            Get the time (milliseconds since January 1, 1970)
+getDay()	            Get the weekday as a number (0-6)
+Date.now()	          Get the time. ECMAScript 5.
+
+## Set Date Methods
+
+Method	      Description
+setDate()	        Set the day as a number (1-31)
+setFullYear()	    Set the year (optionally month and day)
+setHours()	      Set the hour (0-23)
+setMilliseconds()	Set the milliseconds (0-999)
+setMinutes()	    Set the minutes (0-59)
+setMonth()	      Set the month (0-11)
+setSeconds()	    Set the seconds (0-59)
+setTime()	        Set the time (milliseconds since January 1, 1970)
+
+const d = new Date();
+d.setFullYear(2020);
+d.setFullYear(2020, 11, 3);
+d.setMonth(11);
+d.setDate(15);
+d.setDate(d.getDate() + 50);
+d.setHours(22);
+d.setMinutes(30);
+d.setSeconds(30);
+
+ex 
+{
+    let text = "";
+  const today = new Date();
+  const someday = new Date();
+  someday.setFullYear(2100, 0, 14);
+
+  if (someday > today) {
+    text = "Today is before January 14, 2100.";
+  } else {
+    text = "Today is after January 14, 2100.";
+  }
+}
+
+
+# JavaScript Math Object
+Math.PI;      // returns 3.141592653589793
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E
+
+// Only add Math....() in every single element which declare
+Method	                Description
+abs(x)	                Returns the absolute value of x
+acos(x)	                Returns the arccosine of x, in radians
+acosh(x)	              Returns the hyperbolic arccosine of x
+asin(x)	                Returns the arcsine of x, in radians
+asinh(x)	              Returns the hyperbolic arcsine of x
+atan(x)	                Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+atan2(y, x)	            Returns the arctangent of the quotient of its arguments
+atanh(x)	              Returns the hyperbolic arctangent of x
+cbrt(x)	                Returns the cubic root of x
+ceil(x)	                Returns x, rounded upwards to the nearest integer
+cos(x)	                Returns the cosine of x (x is in radians)
+cosh(x)	                Returns the hyperbolic cosine of x
+exp(x)	                Returns the value of Ex
+floor(x)	              Returns x, rounded downwards to the nearest integer
+log(x)	                Returns the natural logarithm (base E) of x
+max(x, y, z, ..., n)	  Returns the number with the highest value
+min(x, y, z, ..., n)	  Returns the number with the lowest value
+pow(x, y)	              Returns the value of x to the power of y
+random()	              Returns a random number between 0 and 1
+round(x)	              Rounds x to the nearest integer
+sign(x)	                Returns if x is negative, null or positive (-1, 0, 1)
+sin(x)	                Returns the sine of x (x is in radians)
+sinh(x)	                Returns the hyperbolic sine of x
+sqrt(x)	                Returns the square root of x
+tan(x)	                Returns the tangent of an angle
+tanh(x)	                Returns the hyperbolic tangent of a number
+trunc(x)	              Returns the integer part of a number (x)
+
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+Math.floor(Math.random() * 100) + 1;
+</script>
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+
+
+# Complete Boolean Reference
+Note the difference between (x==y) and (x===y).
+Comparing two JavaScript objects will always return false.
+
+# Comparison Operator
+<script>
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+
+
+#  For in Object
+<script>
+  const person = {fname:"John", lname:"Doe", age:25};
+
+  let text = "";
+  for (let x in person) {
+    text += person[x];
+  }
+</script>
+
+
+var arr = [3, 5, 7];
+arr.foo = "hello";   
+for (var i in arr) {
+  console.log(i); // logs "0", "1", "2", "foo"
+}
+    
+for (var i of arr) {
+  console.log(i); // logs "3", "5", "7"
+  // it doesn't log "3", "5", "7", "hello"
+}
+
+(Remember that array define as object in js)
+for..in iterates over all enumerable property keys of an object (show all possible key in object)
+
+for..of iterates over the values of an iterable object. Examples of iterable objects are arrays, strings, and NodeLists. (show available value in array)
+
+<script>
+  var arr = [3, 5, 7];
+  arr.foo = "hello";
+      
+  for (var i in arr) {
+    console.log(i); // logs "0", "1", "2", "foo"
+  }
+      
+  for (var i of arr) {
+    console.log(i); // logs "3", "5", "7"
+    // it doesn't log "3", "5", "7", "hello"
+  }
+</script>
+
+
+<script>
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let text = "";
+
+list: {
+  text += cars[0] + "<br>"; 
+  text += cars[1] + "<br>"; 
+  break list;
+  text += cars[2] + "<br>"; 
+  text += cars[3] + "<br>"; 
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+// BMW, Volvo
+
+
+# TYPE OF
+typeof "John"                 // Returns "string"
+typeof 3.14                   // Returns "number"
+typeof NaN                    // Returns "number"
+typeof false                  // Returns "boolean"
+typeof [1,2,3,4]              // Returns "object"
+typeof {name:'John', age:34}  // Returns "object"
+typeof new Date()             // Returns "object"
+typeof function () {}         // Returns "function"
+typeof x                      // Returns "undefined" (if x has no value)
+typeof null                   // Returns "object"
+
+  The data type of NaN is number
+  The data type of an array is object
+  The data type of a date is object
+  The data type of null is object
+  The data type of an undefined variable is undefined *
+  The data type of a variable that has not been assigned a value is also undefined *
+
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+typeof function myFunc(){}   // Returns "function"
+
+## The constructor Property
+
+"John".constructor                // Returns function String()  {[native code]}
+(3.14).constructor                // Returns function Number()  {[native code]}
+false.constructor                 // Returns function Boolean() {[native code]}
+[1,2,3,4].constructor             // Returns function Array()   {[native code]}
+{name:'John',age:34}.constructor  // Returns function Object()  {[native code]}
+new Date().constructor            // Returns function Date()    {[native code]}
+function () {}.constructor        // Returns function Function(){[native code]}
+
+
+/////////////////////////////////////////
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = isArray(fruits);
+
+function isArray(myArray) {
+  return myArray.constructor.toString().indexOf("Array") > -1;
+}
+</script>
+/////////////////////////////////////////////
+////////////////// true /////////////////////
+/////////////////////////////////////////////
