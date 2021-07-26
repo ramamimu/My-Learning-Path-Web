@@ -683,3 +683,29 @@ function isArray(myArray) {
 /////////////////////////////////////////////
 ////////////////// true /////////////////////
 /////////////////////////////////////////////
+
+
+typeof undefined           // undefined
+typeof null                // object
+
+null === undefined         // false
+null == undefined          // true
+
+
+//////////////////////////////////////////////
+////////////////// UNIQUE ////////////////////
+//////////////////////////////////////////////
+
+const person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+const person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+person1.fullName.call(person2);  // Will return "John Doe"
+
+-----------------------------------------------------------
+
