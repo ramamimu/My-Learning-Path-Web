@@ -11,7 +11,7 @@
 8. button type submit
 ------------------------------------
 ## THREE IMPORTANT RESPONSIVE ITEM
-[ ] Visibility<br>
-[ ] Display<br>
-[ ] position <br>
-[ ] floats <br>
+[] Visibility<br>
+[x] Display<br>
+[x] position <br>
+[x] floats <br>
