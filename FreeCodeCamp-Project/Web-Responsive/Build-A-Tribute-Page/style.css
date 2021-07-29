@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    margin-top: 12px;
+}
+
+.clear{
+    clear: both;
+}
+
+main{
+    width: 65%;
+    margin: auto;
+    background-color: #eaeaea;
+    box-sizing: border-box;
+    /* position: relative; */
+    box-sizing: border-box;
+}
+
+#title{
+    padding: 2vw;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+/* figure{
+    position: relative;
+} */
+
+figure h4{
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+#img-div{
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+#image{
+    /* position: relative; */
+    margin: auto;
+}
+
+#img-div #image{
+    max-width: 50%;
+    display: block;
+    /* height: auto; */
+    /* margin: 0 auto; */
+    /* max-width: 400px;
+    display: block; */
+}
+
+#img-caption{
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#tribute-info{
+    /* display: block; */
+    width: 65%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#headline{
+    margin-top: 0.8vw;
+    text-align: center;
+}
+
+
+#quote{
+    margin-top: 20px;
+    /* position: relative */
+}
+
+#quote hr{
+    max-width: 50%;
+    /* text-align: center; */
+    margin: auto;
+}
+
+#quote p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: aliceblue;
+}
+
+#tribute-link{
+    color: rgb(5, 199, 167);
+}
+
+#tribute-link:hover{
+    color: yellow;
+}
+
+
+/*
+////////////////////////////////
+////////MEDIA RESPONSIVE////////
+////////////////////////////////
+*/
+
+@media screen and (min-width: 600px) {
+    #tribute-info ul li{
+        /* margin-left: 80px; */
+        width: 60%;
+        margin: 0 auto;
+    } 
+    
+    #headline{
+        /* margin-top: 2vw; */
+        margin-bottom: 1vw;
+        font-size: 28px;
+    }
+    
+    #list{
+        margin-bottom: 1vw;
+    }
+    
+    #tribute-info ul li{
+        margin-top: 5px;
+        line-height: 24px;
+    } 
+        
+}
+
+@media screen and (max-width: 600px){
+    #title{
+        font-size: 8vw;
+    }
+
+    #img-div #image{
+        max-width: 50vw;
+    }
+
+    #img-caption{
+        font-size: 3vw;
+    }
+ 
+    #tribute-info ul{
+        margin-bottom: 10px;
+    }
+
+    #tribute-info ul li{
+        margin-left: 15px;
+    } 
+ 
+}
