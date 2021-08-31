@@ -1,0 +1,101 @@
+/* Global */
+*{
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+/* Content */
+
+body{
+    height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+div.reviews{
+    text-align: center;
+    margin: auto;
+}
+
+div.container{
+    max-width: 400px;
+}
+
+div.card-reviews{
+    /* background-color: blanchedalmond; */
+    border-radius: 20px;
+    box-shadow: 0 1px 2px green;
+    transition: all .3s;
+}
+
+div.card-reviews:hover{
+    box-shadow: 0 2px 8px green;
+}
+
+div.title-reviews h2{
+    padding: 15px;
+    padding-bottom: 5px;
+}
+
+div.underline{
+    width: 100px;
+    border-top: 5px solid crimson;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+div.image-reviews p{
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px pink;
+}
+
+div.capt-reviews{
+    text-align: justify;
+    padding: 15px;
+    /* border: 5px solid green; */
+    box-shadow: 0 2px 4px pink;
+    height: 200px;
+    overflow: auto;
+}
+
+div.btn-reviews{
+    padding: 10px;
+}
+
+#previous, #next{
+    position: relative;
+    font-size: 25px;
+    font-weight: 900;
+    color: crimson;
+    border: none;
+}
+
+#previous:hover, #next:hover{
+    color: darkblue;
+}
+
+#previous:active, #next:active{
+    top:5px ;
+}
+
+#previous{
+    margin-right: 5px;
+}
+
+
+/* Media Responsive*/
