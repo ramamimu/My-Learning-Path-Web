@@ -51,17 +51,39 @@ div.title-reviews h2{
 }
 
 div.underline{
-    width: 100px;
+    width: 80px;
     border-top: 5px solid crimson;
     margin: auto;
     margin-bottom: 15px;
     border-radius: 10px;
 }
 
+
 div.image-reviews p{
+    position: relative;
     padding: 5px;
     font-weight: bold;
     box-shadow: 0 1px 4px pink;
+}
+
+p.name-reviews:hover{
+    transition: all .3s;
+}
+
+p.name-reviews:hover{
+    background-color: brown;
+    color: #fff;
+    cursor: context-menu;
+}
+
+img#img{
+    border-radius: 10px;
+    position: relative;
+    transition: all .2s;
+}
+
+img#img:hover{
+    transform: scale(1.05);
 }
 
 div.capt-reviews{
@@ -83,10 +105,12 @@ div.btn-reviews{
     font-weight: 900;
     color: crimson;
     border: none;
+    transition: all .3s;
 }
 
 #previous:hover, #next:hover{
     color: darkblue;
+    transform: scale(1.2);
 }
 
 #previous:active, #next:active{
