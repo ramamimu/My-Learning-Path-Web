@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <header>
+    <header>
       <a href="#" class="logo">Logo</a>
       <ul>
         <li><a href="#" class="active">Home</a></li>
@@ -16,7 +16,7 @@
         <li><a href="#">Work</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-    </header> -->
+    </header>
     <section>
       <img src="assets/stars.png" id="stars" alt="" />
       <img src="assets/moon.png" id="moon" alt="" />
@@ -62,6 +62,54 @@
         Voluptatem mollitia ab ullam consequatur. Aspernatur consequuntur
         excepturi quam eaque eum, animi error. Voluptas velit minus distinctio!
         Veritatis rem modi ab sapiente illum quibusdam aperiam.
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium
+        architecto quisquam ipsam a unde, libero ratione voluptas suscipit eum
+        voluptatibus animi ullam, minima iusto ipsa labore nihil! Architecto,
+        reprehenderit quia quo neque sequi vitae dolore rem, error, culpa
+        eligendi adipisci. Pariatur, ut neque. Architecto consequuntur quibusdam
+        cum dolorem exercitationem nulla dolor iste reiciendis, harum fugiat
+        assumenda consequatur fugit velit neque eveniet minus sit, facere,
+        nostrum omnis non? Atque illum iste quasi totam quis ipsa provident odit
+        delectus fugiat! Fugiat, cum. Atque maiores voluptas aut, laudantium
+        voluptate veritatis cum, nam ad consectetur sed rem assumenda
+        exercitationem sequi odit at quam quasi enim corporis. Neque fugit totam
+        voluptate pariatur cumque, impedit quo blanditiis quae voluptas
+        provident asperiores repellat praesentium quis at, assumenda eos sed
+        voluptatibus soluta. Asperiores laudantium nesciunt quis molestiae
+        quidem fuga pariatur voluptate! Reiciendis eos dolorem dignissimos modi
+        corporis quia in illum nobis fugiat iste ipsa, eum itaque accusamus
+        accusantium, aspernatur laboriosam recusandae. Delectus sint sed,
+        accusantium ratione temporibus hic in earum fugit ut libero magni,
+        obcaecati iusto deleniti impedit quas, aliquid excepturi corrupti!
+        Voluptatem mollitia ab ullam consequatur. Aspernatur consequuntur
+        excepturi quam eaque eum, animi error. Voluptas velit minus distinctio!
+        Veritatis rem modi ab sapiente illum quibusdam aperiam.
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laudantium
+        architecto quisquam ipsam a unde, libero ratione voluptas suscipit eum
+        voluptatibus animi ullam, minima iusto ipsa labore nihil! Architecto,
+        reprehenderit quia quo neque sequi vitae dolore rem, error, culpa
+        eligendi adipisci. Pariatur, ut neque. Architecto consequuntur quibusdam
+        cum dolorem exercitationem nulla dolor iste reiciendis, harum fugiat
+        assumenda consequatur fugit velit neque eveniet minus sit, facere,
+        nostrum omnis non? Atque illum iste quasi totam quis ipsa provident odit
+        delectus fugiat! Fugiat, cum. Atque maiores voluptas aut, laudantium
+        voluptate veritatis cum, nam ad consectetur sed rem assumenda
+        exercitationem sequi odit at quam quasi enim corporis. Neque fugit totam
+        voluptate pariatur cumque, impedit quo blanditiis quae voluptas
+        provident asperiores repellat praesentium quis at, assumenda eos sed
+        voluptatibus soluta. Asperiores laudantium nesciunt quis molestiae
+        quidem fuga pariatur voluptate! Reiciendis eos dolorem dignissimos modi
+        corporis quia in illum nobis fugiat iste ipsa, eum itaque accusamus
+        accusantium, aspernatur laboriosam recusandae. Delectus sint sed,
+        accusantium ratione temporibus hic in earum fugit ut libero magni,
+        obcaecati iusto deleniti impedit quas, aliquid excepturi corrupti!
+        Voluptatem mollitia ab ullam consequatur. Aspernatur consequuntur
+        excepturi quam eaque eum, animi error. Voluptas velit minus distinctio!
+        Veritatis rem modi ab sapiente illum quibusdam aperiam.
       </p>
     </div>
     <script>
@@ -75,12 +123,14 @@
 
       window.addEventListener("scroll", function () {
         let value = window.scrollY;
-        stars.style.left = value + "px";
-        moon.style.top = value * 0.8 + "px";
-        mountains_behind.style.top = value * 0.3 + "px";
-        text.style.marginRight = value * 4 + "px";
-        text.style.marginTop = value * 0.8 + "px";
-        btn.style.marginTop = value * 3 + "px";
+        setTimeout(function () {
+          stars.style.left = value * 0.3 + "px";
+          moon.style.top = value * 0.8 + "px";
+          mountains_behind.style.top = value * 0.18 + "px";
+          text.style.marginRight = value * 1.5 + "px";
+          text.style.marginTop = value * 0.5 + "px";
+          btn.style.marginTop = value * 2 + "px";
+        }, 100);
         header.style.top = value * 0.5 + "px";
       });
     </script>
